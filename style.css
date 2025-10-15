@@ -1,0 +1,171 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #e5e8ec, #d2d7dc);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navbar */
+header {
+  width: 90%;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+/* Logo com brilho */
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #C68AFF;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00ffff, 0 0 30px #9ffcff;
+  letter-spacing: 1.2px;
+}
+/* Gaveta do perfil */
+.profile-drawer {
+  position: absolute;
+  top: 95px;
+  right: 5%;
+  width: 230px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.profile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.profile-drawer ul {
+  list-style: none;
+  padding: 15px 0;
+}
+
+.profile-drawer li {
+  padding: 12px 20px;
+  color: #0f0f0f;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-drawer li:hover {
+  background: rgba(0, 234, 255, 0.1);
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.profile-drawer .logout {
+  color: #ff5050;
+  font-weight: 600;
+}
+
+.profile-drawer .logout:hover {
+  background: rgba(255, 80, 80, 0.1);
+  text-shadow: 0 0 10px #ff5050;
+}
+
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+/* Parte direita */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-right input {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.nav-right input:focus {
+  box-shadow: 0 0 10px #00eaff;
+}
+
+/* Ícone de usuário com brilho */
+.user-icon {
+  font-size: 1.4rem;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00ffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00eaff;
+}
+
+/* Barra divisória */
+.divider {
+  width: 100%;
+  height: 1.8px;
+  background: linear-gradient(90deg, rgba(0,234,255,0.2), rgba(0,234,255,0.6), rgba(0,234,255,0.2));
+  box-shadow: 0 0 10px rgba(0,234,255,0.4);
+}
+
+/* Conteúdo principal */
+main {
+  margin-top: 80px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #C68AFF;
+  text-shadow: 0 0 15px #00eaff, 0 0 30px #00ffff;
+  letter-spacing: 1px;
+}

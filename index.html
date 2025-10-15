@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRTIGO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">VRTIGO</div>
+      <ul class="nav-links">
+        <li><a href="#">Loja</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Coleção Nova</a></li>
+      </ul>
+      <div class="nav-right">
+        <input type="text" placeholder="Buscar produtos...">
+        <span class="user-icon">👤</span>
+      </div>
+    </nav>
+    <div class="divider"></div>
+    <!-- Gaveta do perfil -->
+  <div class="profile-drawer" id="profile-drawer">
+    <ul>
+      <li>👤 Meu Perfil</li>
+      <li>🧾 Histórico de Orders</li>
+      <li>⚙️ Definições</li>
+      <li class="logout">🚪 Sair</li>
+    </ul>
+  </div>
+  </header>
+
+  <main>
+    <h1>Welcome to VRTIGO</h1>
+  </main>
+   <script>
+    const userIcon = document.getElementById('user-icon');
+    const drawer = document.getElementById('profile-drawer');
+
+    userIcon.addEventListener('click', () => {
+      drawer.classList.toggle('open');
+    });
+
+    // Fecha se clicar fora da gaveta
+    document.addEventListener('click', (e) => {
+      if (!drawer.contains(e.target) && !userIcon.contains(e.target)) {
+        drawer.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
